@@ -1,0 +1,32 @@
+LU decomposition to solve the problem to get the solution of the matrix 
+
+
+ THE GIVEN CONDITION IS (IN PAPER):
+
+ MATRIX(A) * WEIGHT OR VARIABLE REQUIRED(X)=Y
+ THEREFORE A*X=Y
+
+ after decomposition of matrix A=LU
+ LU*X=Y
+ since U*X=m
+ Lm=Y
+
+ in this way first we calculate the m after getting m reverse the process to find the solution i.e: values of X
+
+ 
+ THE GIVEN CONDITION IS (IN CODE):
+ we decomposed into the three parts P,L,U here P is the permutation (and swapping the rows to get the lower triangular values)
+
+ after getting swapping get dot product  of p and L which is equals to l
+ for getting the values of m and X
+
+ for m:
+    get dot product of inverse of l and y
+    Lm=y
+    move the L on on other side do inv L on both sides
+    m=inv of L .dot(Y)
+ for X:
+    get dot product of inverse of u and m    
+    UX=m
+    move the U on on other side do inv U on both sides
+    X=inv of U .dot(m)
